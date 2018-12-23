@@ -1,0 +1,36 @@
+[
+    {
+        "user_id": 1,
+        "name": "Tom",
+        "photo_url": "https://static.pechakucha.org/pechakucha/uploads/user/avatar/5362f5f5dbdd20ab6b000002/profile_Chris_Solarski_Portrait_Round.png",
+        "last_location": {
+            "location_id": 1,
+            "lat": 50.483946,
+            "lng": 30.343678,
+            "accuracy": 100,
+            "timestamp": 1545498917000
+        }
+    }, {
+        "user_id": 2,
+        "name": "Barbara",
+        "photo_url": "http://files.kollabora.com/sites/default/files/styles/250x250-square/public/14455/files/144_profileround.png?itok=iA_fRGQ9",
+        "last_location": {
+            "location_id": 2,
+            "lat": 50.455820,
+            "lng": 30.506571,
+            "accuracy": 100,
+            "timestamp": 1544894117000
+        }
+    }, {
+        "user_id": 3,
+        "name": "Chris",
+        "photo_url": "https://media.creativemornings.com/uploads/user/avatar/167913/Adam_LR_Round_Profile_Pic.jpg",
+        "last_location": {
+            "location_id": 3,
+            "lat": 50.515449,
+            "lng": 30.464746,
+            "accuracy": 100,
+            "timestamp": 1543684517000
+        }
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "location_id": 1,
+        "lat": 50.483946,
+        "lng": 30.343678,
+        "accuracy": 100,
+        "timestamp": 1545498917000
+    },{
+        "location_id": 2,
+        "lat": 50.455820,
+        "lng": 30.506571,
+        "accuracy": 100,
+        "timestamp": 1544894117000
+    },{
+        "location_id": 3,
+        "lat": 50.515449,
+        "lng": 30.464746,
+        "accuracy": 100,
+        "timestamp": 1543684517000
+    }
+]

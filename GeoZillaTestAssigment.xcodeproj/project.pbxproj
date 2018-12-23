@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1E40292121CEBC5300D8A69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40292021CEBC5300D8A69D /* AppDelegate.swift */; };
-		1E40292321CEBC5300D8A69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40292221CEBC5300D8A69D /* ViewController.swift */; };
+		1E40292321CEBC5300D8A69D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40292221CEBC5300D8A69D /* MapViewController.swift */; };
 		1E40292621CEBC5300D8A69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E40292421CEBC5300D8A69D /* Main.storyboard */; };
 		1E40292921CEBC5300D8A69D /* GeoZillaTestAssigment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E40292721CEBC5300D8A69D /* GeoZillaTestAssigment.xcdatamodeld */; };
 		1E40292B21CEBC5500D8A69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E40292A21CEBC5500D8A69D /* Assets.xcassets */; };
 		1E40292E21CEBC5500D8A69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E40292C21CEBC5500D8A69D /* LaunchScreen.storyboard */; };
 		1E40293921CEBC5500D8A69D /* GeoZillaTestAssigmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40293821CEBC5500D8A69D /* GeoZillaTestAssigmentTests.swift */; };
+		1E40294421CEBF2000D8A69D /* all_users.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E40294321CEBF2000D8A69D /* all_users.json */; };
+		1E40294621CEBF4F00D8A69D /* user_locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E40294521CEBF4F00D8A69D /* user_locations.json */; };
+		1E40294821CEC1F200D8A69D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40294721CEC1F200D8A69D /* Person.swift */; };
+		1E40294A21CEC20100D8A69D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40294921CEC20100D8A69D /* Location.swift */; };
+		1E40294C21CED67B00D8A69D /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40294B21CED67B00D8A69D /* LocationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +34,7 @@
 /* Begin PBXFileReference section */
 		1E40291D21CEBC5300D8A69D /* GeoZillaTestAssigment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoZillaTestAssigment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E40292021CEBC5300D8A69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E40292221CEBC5300D8A69D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E40292221CEBC5300D8A69D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1E40292521CEBC5300D8A69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E40292821CEBC5300D8A69D /* GeoZillaTestAssigment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoZillaTestAssigment.xcdatamodel; sourceTree = "<group>"; };
 		1E40292A21CEBC5500D8A69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +43,11 @@
 		1E40293421CEBC5500D8A69D /* GeoZillaTestAssigmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoZillaTestAssigmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E40293821CEBC5500D8A69D /* GeoZillaTestAssigmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoZillaTestAssigmentTests.swift; sourceTree = "<group>"; };
 		1E40293A21CEBC5500D8A69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E40294321CEBF2000D8A69D /* all_users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = all_users.json; sourceTree = "<group>"; };
+		1E40294521CEBF4F00D8A69D /* user_locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user_locations.json; sourceTree = "<group>"; };
+		1E40294721CEC1F200D8A69D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		1E40294921CEC20100D8A69D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		1E40294B21CED67B00D8A69D /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				1E40292021CEBC5300D8A69D /* AppDelegate.swift */,
-				1E40292221CEBC5300D8A69D /* ViewController.swift */,
+				1E40294F21CF0BC300D8A69D /* Data */,
+				1E40294E21CED69F00D8A69D /* Controllers */,
+				1E40294D21CED68F00D8A69D /* Model */,
 				1E40292421CEBC5300D8A69D /* Main.storyboard */,
 				1E40292A21CEBC5500D8A69D /* Assets.xcassets */,
 				1E40292C21CEBC5500D8A69D /* LaunchScreen.storyboard */,
@@ -97,6 +109,33 @@
 				1E40293A21CEBC5500D8A69D /* Info.plist */,
 			);
 			path = GeoZillaTestAssigmentTests;
+			sourceTree = "<group>";
+		};
+		1E40294D21CED68F00D8A69D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E40294721CEC1F200D8A69D /* Person.swift */,
+				1E40294921CEC20100D8A69D /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1E40294E21CED69F00D8A69D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E40292221CEBC5300D8A69D /* MapViewController.swift */,
+				1E40294B21CED67B00D8A69D /* LocationsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1E40294F21CF0BC300D8A69D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1E40294321CEBF2000D8A69D /* all_users.json */,
+				1E40294521CEBF4F00D8A69D /* user_locations.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +219,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E40294621CEBF4F00D8A69D /* user_locations.json in Resources */,
+				1E40294421CEBF2000D8A69D /* all_users.json in Resources */,
 				1E40292E21CEBC5500D8A69D /* LaunchScreen.storyboard in Resources */,
 				1E40292B21CEBC5500D8A69D /* Assets.xcassets in Resources */,
 				1E40292621CEBC5300D8A69D /* Main.storyboard in Resources */,
@@ -200,9 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E40292321CEBC5300D8A69D /* ViewController.swift in Sources */,
+				1E40292321CEBC5300D8A69D /* MapViewController.swift in Sources */,
 				1E40292121CEBC5300D8A69D /* AppDelegate.swift in Sources */,
+				1E40294A21CEC20100D8A69D /* Location.swift in Sources */,
+				1E40294821CEC1F200D8A69D /* Person.swift in Sources */,
 				1E40292921CEBC5300D8A69D /* GeoZillaTestAssigment.xcdatamodeld in Sources */,
+				1E40294C21CED67B00D8A69D /* LocationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
