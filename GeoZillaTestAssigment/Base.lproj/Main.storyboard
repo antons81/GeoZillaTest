@@ -13,7 +13,7 @@
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="GeoZillaTestAssigment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="GeoZillaTestAssigment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="H6A-lf-cF1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="J4c-Ou-4AU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="J4c-Ou-4AU">
+                            <connections>
+                                <action selector="getAllUsers" destination="BYZ-38-t0r" id="d0p-OO-1oq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="map" destination="N4s-An-abB" id="eaG-ND-Rck"/>
@@ -45,7 +49,7 @@
         <!--Locations View Controller-->
         <scene sceneID="3hO-Zf-VOl">
             <objects>
-                <viewController id="CfX-PB-fKS" customClass="LocationsViewController" customModule="GeoZillaTestAssigment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationsViewController" id="CfX-PB-fKS" customClass="LocationsViewController" customModule="GeoZillaTestAssigment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZkF-pz-Jwd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

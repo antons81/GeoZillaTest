@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias persons = [Person]
+typealias Persons = [Person]
 
 struct Person: Decodable {
     let userID: Int
@@ -21,5 +21,13 @@ struct Person: Decodable {
         case name
         case photoURL = "photo_url"
         case lastLocation = "last_location"
+    }
+}
+
+class PersonModel {
+    static func getPersons(completion: (([Person]) -> Void)?) {
+        APIManager.shared.createRequest(with: .users) { (users: Persons) in
+            completion?(users)
+        }
     }
 }

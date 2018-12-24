@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias locations = [Location]
+typealias Locations = [Location]
 
 struct Location: Decodable {
     let locationID: Int
@@ -19,5 +19,13 @@ struct Location: Decodable {
     enum CodingKeys: String, CodingKey {
         case locationID = "location_id"
         case lat, lng, accuracy, timestamp
+    }
+}
+
+class LocationModel {
+    static func getLocations(completion: (([Location]) -> Void)?) {
+        APIManager.shared.createRequest(with: .locations) { (locations: Locations) in
+            completion?(locations)
+        }
     }
 }

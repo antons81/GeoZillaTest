@@ -2,7 +2,7 @@
     {
         "user_id": 1,
         "name": "Tom",
-        "photo_url": "https://static.pechakucha.org/pechakucha/uploads/user/avatar/5362f5f5dbdd20ab6b000002/profile_Chris_Solarski_Portrait_Round.png",
+        "photo_url": "tom",
         "last_location": {
             "location_id": 1,
             "lat": 50.483946,
@@ -13,7 +13,7 @@
     }, {
         "user_id": 2,
         "name": "Barbara",
-        "photo_url": "http://files.kollabora.com/sites/default/files/styles/250x250-square/public/14455/files/144_profileround.png?itok=iA_fRGQ9",
+        "photo_url": "barbara",
         "last_location": {
             "location_id": 2,
             "lat": 50.455820,
@@ -24,7 +24,7 @@
     }, {
         "user_id": 3,
         "name": "Chris",
-        "photo_url": "https://media.creativemornings.com/uploads/user/avatar/167913/Adam_LR_Round_Profile_Pic.jpg",
+        "photo_url": "chris",
         "last_location": {
             "location_id": 3,
             "lat": 50.515449,
