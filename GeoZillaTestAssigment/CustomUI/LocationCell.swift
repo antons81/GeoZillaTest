@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class LocationCell: UITableViewCell {
     
@@ -16,11 +17,26 @@ class LocationCell: UITableViewCell {
     @IBOutlet weak var accuracy: UILabel!
     @IBOutlet weak var timestamp: UILabel!
     
+    var geocodedAddress = ""
+    
     func setup(with location: Location) {
         self.id.text = String(location.locationID)
-        self.coordinates.text = "\(location.lat), \(location.lng)"
         self.accuracy.text = String(location.accuracy)
         self.timestamp.text = String(location.timestamp)
+        self.geocode(coordinates: CLLocation(latitude: location.lat, longitude: location.lng))
+    }
+    
+    private func geocode(coordinates: CLLocation) {
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(coordinates, preferredLocale: Locale(identifier: "ru_UK")) { (places, error) in
+            if (error != nil) {
+                print("Couldn't convert address, an error occcured: \(String(describing: error?.localizedDescription))")
+                return
+            }
+            if let place = places?.first?.name {
+                self.coordinates.text = place
+            }
+        }
     }
     
     override func prepareForReuse() {
