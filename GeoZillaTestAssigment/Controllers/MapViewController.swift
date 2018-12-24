@@ -48,8 +48,9 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func getAllUsers() {
+        self.map.removeAnnotations(self.annotations)
         PersonModel.getPersons { persons in
-            self.users = persons
+            self.users = persons.sorted() {_, _ in arc4random() % 2 == 0}
         }
     }
     
@@ -100,23 +101,15 @@ extension MapViewController: MKMapViewDelegate {
             if let image = annotation.subtitle {
                 iconView.profileImage.image = UIImage(named: image ?? "")
             }
-            view.leftCalloutAccessoryView = iconView
-            view.isUserInteractionEnabled = true
-            
-            let button = UIButton(type: .infoLight)
-            button.addTarget(self, action: #selector(moveToDetails), for: .touchUpInside)
-            view.rightCalloutAccessoryView = button
-            view.layoutIfNeeded()
+            view.detailCalloutAccessoryView = iconView
+            iconView.didTap = {
+                if let detail = self.storyboard?.instantiateViewController(withClass: LocationsViewController.self) {
+                    self.show(detail, sender: self)
+                }
+            }
         }
         
         return view
     }
-    
-    @objc private func moveToDetails() {
-        if let detail = self.storyboard?.instantiateViewController(withClass: LocationsViewController.self) {
-            self.show(detail, sender: self)
-        }
-    }
-    
 }
 

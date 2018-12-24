@@ -32,15 +32,20 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="location" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdW-cU-lx5">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="location" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdW-cU-lx5">
                     <rect key="frame" x="64" y="32.5" width="131.5" height="21.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMN-21-6RE">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMN-21-6RE">
                     <rect key="frame" x="9" y="61" width="186.5" height="29"/>
-                    <state key="normal" image="showButton"/>
+                    <state key="normal" title="Show all locations">
+                        <color key="titleColor" red="0.2156862745" green="0.72156862749999995" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="accessoryTapped" destination="iN0-l3-epB" eventType="touchUpInside" id="F5Z-CR-bea"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,7 +76,6 @@
         </view>
     </objects>
     <resources>
-        <image name="showButton" width="10" height="20"/>
         <image name="tom" width="400" height="400"/>
     </resources>
 </document>

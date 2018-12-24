@@ -24,4 +24,7 @@ class CustomCollout: UIView {
         didTap?()
     }
     
+    @IBAction func accessoryTapped() {
+        didTap?()
+    }
 }
