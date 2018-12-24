@@ -5,7 +5,6 @@ target 'GeoZillaTestAssigment' do
   use_frameworks!
   
 pod 'SwifterSwift'
-pod 'OHHTTPStubs/Swift'
 
   target 'GeoZillaTestAssigmentTests' do
     inherit! :search_paths

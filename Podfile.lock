@@ -1,17 +1,4 @@
 PODS:
-  - OHHTTPStubs/Core (6.1.0)
-  - OHHTTPStubs/Default (6.1.0):
-    - OHHTTPStubs/Core
-    - OHHTTPStubs/JSON
-    - OHHTTPStubs/NSURLSession
-    - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (6.1.0):
-    - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (6.1.0):
-    - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (6.1.0)
-  - OHHTTPStubs/Swift (6.1.0):
-    - OHHTTPStubs/Default
   - SwifterSwift (4.6.0):
     - SwifterSwift/AppKit (= 4.6.0)
     - SwifterSwift/CoreGraphics (= 4.6.0)
@@ -31,18 +18,15 @@ PODS:
   - SwifterSwift/UIKit (4.6.0)
 
 DEPENDENCIES:
-  - OHHTTPStubs/Swift
   - SwifterSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs:
-    - OHHTTPStubs
     - SwifterSwift
 
 SPEC CHECKSUMS:
-  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
   SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
 
-PODFILE CHECKSUM: 264eb520e33d782d4a1276e69148c6afdd61f07d
+PODFILE CHECKSUM: a2de192fce86cab62617215a1d07fa2436f5ac3f
 
 COCOAPODS: 1.6.0.beta.1
