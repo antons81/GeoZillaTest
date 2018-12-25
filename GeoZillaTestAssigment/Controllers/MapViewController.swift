@@ -49,7 +49,8 @@ class MapViewController: UIViewController {
     
     @IBAction func getAllUsers() {
         self.map.removeAnnotations(self.annotations)
-        PersonModel.getPersons { persons in
+        PersonModel.getPersons { [weak self] persons in
+            guard let self = self else { return }
             self.users = persons.sorted() {_, _ in arc4random() % 2 == 0}
         }
     }

@@ -40,7 +40,6 @@ class LocationsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         self.locations.removeAll()
     }
-    
 }
 
 extension LocationsViewController: UITableViewDataSource {
