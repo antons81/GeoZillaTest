@@ -23,14 +23,6 @@ class LocationsViewController: UIViewController {
         }
     }
     
-    var cachedLocations = [CDLocation]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableView.automaticDimension
@@ -43,9 +35,19 @@ class LocationsViewController: UIViewController {
     
     private func fetchCachedData() {
         CoreDataManager.shared.fetchData(entityName: locationEntityName) { locations in
-            var loc = [Location]()
-            for location in locations {
-                print(location.value(forKey: "id") ?? 0)
+            if locations.count > 0 {
+                self.locations.removeAll()
+                var cachedLocations = [Location]()
+                
+                for location in locations {
+                    let loc = Location.init(locationID: location.value(forKey: "id") as! Int,
+                                  lat: location.value(forKey: "lat") as! Double,
+                                  lng: location.value(forKey: "lng") as! Double,
+                                  accuracy: location.value(forKey: "accuracy") as! Int,
+                                  timestamp: location.value(forKey: "timestamp") as! Double)
+                    cachedLocations.append(loc)
+                }
+                self.locations = cachedLocations
             }
         }
     }
@@ -53,7 +55,7 @@ class LocationsViewController: UIViewController {
     private func fetchLocations() {
         LocationModel.getLocations { [weak self] locations in
             guard let self = self else { return }
-            self.locations = locations
+            //self.locations = locations // using core data
         
             for location in locations {
                 if !CoreDataManager.shared.isExist(for: self.locationEntityName, id: location.locationID) {
@@ -73,7 +75,6 @@ class LocationsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         self.locations.removeAll()
-        self.cachedLocations.removeAll()
     }
 }
 
