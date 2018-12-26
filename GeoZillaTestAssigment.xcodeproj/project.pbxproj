@@ -31,6 +31,7 @@
 		1E40296521D05DF800D8A69D /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E40296421D05DF800D8A69D /* LocationCell.xib */; };
 		1E40296721D05E0300D8A69D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40296621D05E0300D8A69D /* LocationCell.swift */; };
 		1E40296921D0662500D8A69D /* CustomAnnonationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40296821D0662500D8A69D /* CustomAnnonationView.swift */; };
+		1E402CC521D2EC6300D8A69D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E402CC421D2EC6300D8A69D /* CoreDataManager.swift */; };
 		A8D241639303E817222AFFEB /* Pods_GeoZillaTestAssigmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C72CE72EC2AC745DD9045C /* Pods_GeoZillaTestAssigmentTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		1E40296421D05DF800D8A69D /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		1E40296621D05E0300D8A69D /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		1E40296821D0662500D8A69D /* CustomAnnonationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnonationView.swift; sourceTree = "<group>"; };
+		1E402CC421D2EC6300D8A69D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2098EEFF4BCA5A49B527CC4C /* Pods-GeoZillaTestAssigmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoZillaTestAssigmentTests.debug.xcconfig"; path = "Target Support Files/Pods-GeoZillaTestAssigmentTests/Pods-GeoZillaTestAssigmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F770262066F927EAEF19BB0 /* Pods-GeoZillaTestAssigmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoZillaTestAssigmentTests.release.xcconfig"; path = "Target Support Files/Pods-GeoZillaTestAssigmentTests/Pods-GeoZillaTestAssigmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E862BE0A9E584D80F707A2A /* Pods_GeoZillaTestAssigment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoZillaTestAssigment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				1E40295221D0122D00D8A69D /* CustomLocationManager.swift */,
+				1E402CC421D2EC6300D8A69D /* CoreDataManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -246,7 +249,7 @@
 				1E40291921CEBC5200D8A69D /* Sources */,
 				1E40291A21CEBC5200D8A69D /* Frameworks */,
 				1E40291B21CEBC5200D8A69D /* Resources */,
-				EE5006B0E85184F7B1F8E576 /* [CP] Embed Pods Frameworks */,
+				6F0D32AC0A8119C2FFC7366B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -383,7 +386,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE5006B0E85184F7B1F8E576 /* [CP] Embed Pods Frameworks */ = {
+		6F0D32AC0A8119C2FFC7366B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,6 +429,7 @@
 				1E40292921CEBC5300D8A69D /* GeoZillaTestAssigment.xcdatamodeld in Sources */,
 				1E40294C21CED67B00D8A69D /* LocationsViewController.swift in Sources */,
 				1E40295C21D0414200D8A69D /* RequestType.swift in Sources */,
+				1E402CC521D2EC6300D8A69D /* CoreDataManager.swift in Sources */,
 				1E40296121D0541A00D8A69D /* CustomAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,7 +594,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S9676DF7C4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GeoZillaTestAssigment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,7 +603,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aSoft.GeoZillaTestAssigment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -609,7 +613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S9676DF7C4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GeoZillaTestAssigment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -618,7 +622,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aSoft.GeoZillaTestAssigment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
