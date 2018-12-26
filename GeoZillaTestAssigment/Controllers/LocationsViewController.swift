@@ -43,8 +43,10 @@ class LocationsViewController: UIViewController {
     
     private func fetchCachedData() {
         CoreDataManager.shared.fetchData(entityName: locationEntityName) { locations in
-             print(locations)
-            
+            var loc = [Location]()
+            for location in locations {
+                print(location.value(forKey: "id") ?? 0)
+            }
         }
     }
     
@@ -52,22 +54,22 @@ class LocationsViewController: UIViewController {
         LocationModel.getLocations { [weak self] locations in
             guard let self = self else { return }
             self.locations = locations
-            let locationEntity = CoreDataManager.shared.createEntity(with: self.locationEntityName)
-            
+        
             for location in locations {
-                if CoreDataManager.shared.isExist(for: self.locationEntityName, id: location.locationID) {
-                    return
+                if !CoreDataManager.shared.isExist(for: self.locationEntityName, id: location.locationID) {
+                    let locationsDB = NSEntityDescription.insertNewObject(forEntityName: self.locationEntityName,
+                                                                          into: CoreDataManager.shared.defaultContext)
+                    locationsDB.setValue(location.locationID, forKey: "id")
+                    locationsDB.setValue(location.lat, forKey: "lat")
+                    locationsDB.setValue(location.lng, forKey: "lng")
+                    locationsDB.setValue(location.accuracy, forKey: "accuracy")
+                    locationsDB.setValue(location.timestamp, forKey: "timestamp")
                 }
-                locationEntity?.setValue(location.locationID, forKey: "id")
-                locationEntity?.setValue(location.lat, forKey: "lat")
-                locationEntity?.setValue(location.lng, forKey: "lng")
-                locationEntity?.setValue(location.accuracy, forKey: "accuracy")
-                locationEntity?.setValue(location.timestamp, forKey: "timestamp")
             }
             CoreDataManager.shared.saveContext()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         self.locations.removeAll()

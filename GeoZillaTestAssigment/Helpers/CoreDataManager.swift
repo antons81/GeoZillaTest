@@ -93,8 +93,13 @@ class CoreDataManager {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         fetchRequest.predicate = NSPredicate(format: "id = %d", id)
         
-        let res = try! self.defaultContext.fetch(fetchRequest)
-        return res.count > 0 ? true : false
+        do {
+        let res = try self.defaultContext.fetch(fetchRequest)
+            return res.count > 0
+        } catch let error {
+            print("could not fetch data, error:", error.localizedDescription)
+            return false
+        }
     }
     
     func fetchData<T: NSManagedObject>(entityName: String, completion: (([T]) -> Void)?) {
