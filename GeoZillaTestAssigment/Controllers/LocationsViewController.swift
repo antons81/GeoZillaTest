@@ -30,7 +30,6 @@ class LocationsViewController: UIViewController {
         self.tableView.register(UINib.init(nibName: "LocationCell", bundle: nil), forCellReuseIdentifier: "LocationCell")
         self.tableView.tableFooterView = UIView()
         self.fetchLocations()
-        fetchCachedData()
     }
     
     private func fetchCachedData() {
@@ -55,7 +54,6 @@ class LocationsViewController: UIViewController {
     private func fetchLocations() {
         LocationModel.getLocations { [weak self] locations in
             guard let self = self else { return }
-            //self.locations = locations // using core data
         
             for location in locations {
                 if !CoreDataManager.shared.isExist(for: self.locationEntityName, id: location.locationID) {
@@ -70,6 +68,7 @@ class LocationsViewController: UIViewController {
             }
             CoreDataManager.shared.saveContext()
         }
+        self.fetchCachedData()
     }
     
     override func didReceiveMemoryWarning() {

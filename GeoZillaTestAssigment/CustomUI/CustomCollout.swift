@@ -21,7 +21,6 @@ class CustomCollout: UIView {
         self.profileImage.image = UIImage(named: person.photoURL)
         self.name.text = person.name
         self.location.text = String(person.lastLocation.lat)
-        didTap?()
     }
     
     @IBAction func accessoryTapped() {
