@@ -47,10 +47,9 @@ class LocationModel {
     }
     
     static func fetchCachedData(completion: ((Locations) -> Void)?) {
+        
         getLocations {
-            
             var cachedLocations = [Location]()
-            
             CoreDataManager.shared.fetchData(entityName: locationEntityName) { locations in
                 if locations.count > 0 {
                     for location in locations {
