@@ -106,9 +106,12 @@ class CoreDataManager {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         do {
             let result = try self.defaultContext.fetch(fetchRequest)
-            completion?(result as! [T])
+            if let result = result as? [T] {
+                completion?(result)
+            }
+            completion?([])
         } catch let error {
-            print("Could not fetch data from entity \(entityName) error: ", error)
+            print("Could not fetch data from entity \(entityName) error: ", error.localizedDescription)
         }
     }
 }

@@ -84,32 +84,33 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
+        var view: CustomAnnonationView!
         let identifier = "customAnnotation"
-        
         if annotation is MKUserLocation, !(annotation is MKPointAnnotation) {
             return nil
         }
-        
-        var view: CustomAnnonationView!
-        
+
         if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CustomAnnonationView {
             view = annotationView
         } else {
+            
             view = CustomAnnonationView(annotation: annotation, reuseIdentifier: identifier)
             
             let iconView = CustomCollout.instantiateFromXib()
             iconView.name.text = annotation.title as? String
+            
             if let image = annotation.subtitle {
                 iconView.profileImage.image = UIImage(named: image ?? "")
             }
+            
             view.detailCalloutAccessoryView = iconView
+            
             iconView.didTap = {
                 if let detail = self.storyboard?.instantiateViewController(withClass: LocationsViewController.self) {
                     self.show(detail, sender: self)
                 }
             }
         }
-        
         return view
     }
 }
