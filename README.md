@@ -1,5 +1,4 @@
 # GeoZillaTest
 
-Test Assigment for Geozilla Company
+Test Assigment 
 
-PLease use 'develop' Branch
