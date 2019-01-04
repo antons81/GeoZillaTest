@@ -2,12 +2,13 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D32a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CDLocation" representedClassName="CDLocation" syncable="YES" codeGenerationType="class">
         <attribute name="accuracy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="geocoded" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lng" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" versionHashModifier="sha" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CDLocation" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="CDLocation" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

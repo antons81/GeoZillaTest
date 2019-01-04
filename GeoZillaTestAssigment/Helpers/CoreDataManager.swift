@@ -104,12 +104,13 @@ class CoreDataManager {
     
     func fetchData<T: NSManagedObject>(entityName: String, completion: (([T]) -> Void)?) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+        
         do {
             let result = try self.defaultContext.fetch(fetchRequest)
             if let result = result as? [T] {
                 completion?(result)
             }
-            completion?([])
         } catch let error {
             print("Could not fetch data from entity \(entityName) error: ", error.localizedDescription)
         }
