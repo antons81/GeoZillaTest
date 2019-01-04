@@ -43,7 +43,7 @@ class LocationModel {
     private static func getLocations(completion: (() -> Void)?) {
         APIManager.shared.createRequest(with: .locations) { (locations: Locations) in
             
-            CoreDataManager.shared.deleteAllData(self.locationEntityName) // uncomment to remove all records before adding
+            //CoreDataManager.shared.deleteAllData(self.locationEntityName)
             
             for location in locations {
                 if !CoreDataManager.shared.isExist(for: self.locationEntityName, id: location.locationID) {
@@ -60,10 +60,10 @@ class LocationModel {
                     
                     self.geocode(coordinates: coords, completion: { loc in
                         locationsDB.setValue(loc, forKey: "geocoded")
+                        CoreDataManager.shared.saveContext()
                     })
                 }
             }
-            CoreDataManager.shared.saveContext()
             completion?()
         }
     }
