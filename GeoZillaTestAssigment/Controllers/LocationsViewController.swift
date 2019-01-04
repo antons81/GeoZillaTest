@@ -13,13 +13,7 @@ class LocationsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var locations = [Location]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+    var locations = [CDLocation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +23,13 @@ class LocationsViewController: UIViewController {
         self.tableView.tableFooterView = UIView()
         
         self.fetchLocations()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     private func fetchLocations() {

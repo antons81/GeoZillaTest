@@ -2,7 +2,7 @@
 //  CDLocation+CoreDataProperties.swift
 //  
 //
-//  Created by Anton Stremovskiy on 12/26/18.
+//  Created by Anton Stremovskiy on 1/4/19.
 //
 //
 
@@ -16,10 +16,11 @@ extension CDLocation {
         return NSFetchRequest<CDLocation>(entityName: "CDLocation")
     }
 
+    @NSManaged public var accuracy: Int64
     @NSManaged public var id: Int64
     @NSManaged public var lat: Double
     @NSManaged public var lng: Double
-    @NSManaged public var accuracy: Int64
     @NSManaged public var timestamp: Double
+    @NSManaged public var geocoded: String?
 
 }
