@@ -107,7 +107,6 @@
 		1E40291421CEBC5200D8A69D = {
 			isa = PBXGroup;
 			children = (
-				1E402CD521DEDBD100D8A69D /* CoreDataModels */,
 				1E40291F21CEBC5300D8A69D /* GeoZillaTestAssigment */,
 				1E40293721CEBC5500D8A69D /* GeoZillaTestAssigmentTests */,
 				1E40291E21CEBC5300D8A69D /* Products */,
@@ -129,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				1E40292021CEBC5300D8A69D /* AppDelegate.swift */,
+				1E402CD521DEDBD100D8A69D /* CoreDataModels */,
 				1E40295D21D04D8C00D8A69D /* Extensions */,
 				1E40294F21CF0BC300D8A69D /* Data */,
 				1E40295421D0165A00D8A69D /* CustomUI */,
@@ -227,8 +227,7 @@
 				1E402CD621DEDBD100D8A69D /* CDLocation+CoreDataClass.swift */,
 				1E402CD721DEDBD100D8A69D /* CDLocation+CoreDataProperties.swift */,
 			);
-			name = CoreDataModels;
-			path = GeoZillaTestAssigment/CoreDataModels;
+			path = CoreDataModels;
 			sourceTree = "<group>";
 		};
 		5E8C6FD4244DCF30906B98A9 /* Frameworks */ = {
