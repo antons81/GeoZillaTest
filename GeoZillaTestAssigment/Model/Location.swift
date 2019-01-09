@@ -43,14 +43,15 @@ class LocationModel {
     private static func getLocations(completion: (() -> Void)?) {
         APIManager.shared.createRequest(with: .locations) { (locations: Locations) in
             
-            //CoreDataManager.shared.deleteAllData(self.locationEntityName)
+            CoreDataManager.shared.deleteAllData(self.locationEntityName)
             
             for location in locations {
                 if !CoreDataManager.shared.isExist(for: self.locationEntityName, id: location.locationID) {
-                    let locationsDB = NSEntityDescription.insertNewObject(forEntityName: self.locationEntityName,
-                                                                          into: CoreDataManager.shared.defaultContext)
                     
                     let coords = CLLocation(latitude: location.lat, longitude: location.lng)
+                    
+                    let locationsDB = NSEntityDescription.insertNewObject(forEntityName: self.locationEntityName,
+                                                                          into: CoreDataManager.shared.defaultContext)
                     
                     locationsDB.setValue(location.locationID, forKey: "id")
                     locationsDB.setValue(location.lat, forKey: "lat")
@@ -60,11 +61,12 @@ class LocationModel {
                     
                     self.geocode(coordinates: coords, completion: { loc in
                         locationsDB.setValue(loc, forKey: "geocoded")
-                        CoreDataManager.shared.saveContext()
+                        CoreDataManager.shared.saveContext {
+                            completion?()
+                        }
                     })
                 }
             }
-            completion?()
         }
     }
     

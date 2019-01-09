@@ -115,4 +115,9 @@ class CoreDataManager {
             print("Could not fetch data from entity \(entityName) error: ", error.localizedDescription)
         }
     }
+    
+    func saveContext(completion: () -> Void) {
+        self.saveContext()
+        completion()
+    }
 }

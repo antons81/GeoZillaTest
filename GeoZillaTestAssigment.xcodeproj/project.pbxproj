@@ -32,6 +32,8 @@
 		1E40296721D05E0300D8A69D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40296621D05E0300D8A69D /* LocationCell.swift */; };
 		1E40296921D0662500D8A69D /* CustomAnnonationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40296821D0662500D8A69D /* CustomAnnonationView.swift */; };
 		1E402CC521D2EC6300D8A69D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E402CC421D2EC6300D8A69D /* CoreDataManager.swift */; };
+		1EF427A021E640A600656122 /* GeocoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF4279F21E640A600656122 /* GeocoderService.swift */; };
+		1EF427A221E64D2C00656122 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF427A121E64D2C00656122 /* Extension+UITableView.swift */; };
 		A8D241639303E817222AFFEB /* Pods_GeoZillaTestAssigmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C72CE72EC2AC745DD9045C /* Pods_GeoZillaTestAssigmentTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		1E402CC421D2EC6300D8A69D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1E402CD621DEDBD100D8A69D /* CDLocation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1E402CD721DEDBD100D8A69D /* CDLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1EF4279F21E640A600656122 /* GeocoderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderService.swift; sourceTree = "<group>"; };
+		1EF427A121E64D2C00656122 /* Extension+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
 		2098EEFF4BCA5A49B527CC4C /* Pods-GeoZillaTestAssigmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoZillaTestAssigmentTests.debug.xcconfig"; path = "Target Support Files/Pods-GeoZillaTestAssigmentTests/Pods-GeoZillaTestAssigmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F770262066F927EAEF19BB0 /* Pods-GeoZillaTestAssigmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoZillaTestAssigmentTests.release.xcconfig"; path = "Target Support Files/Pods-GeoZillaTestAssigmentTests/Pods-GeoZillaTestAssigmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E862BE0A9E584D80F707A2A /* Pods_GeoZillaTestAssigment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoZillaTestAssigment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +199,7 @@
 			children = (
 				1E40295221D0122D00D8A69D /* CustomLocationManager.swift */,
 				1E402CC421D2EC6300D8A69D /* CoreDataManager.swift */,
+				1EF4279F21E640A600656122 /* GeocoderService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			children = (
 				1E40295E21D04DB800D8A69D /* Extension+UIView.swift */,
 				1E40296221D0571700D8A69D /* Extension+NSObject.swift */,
+				1EF427A121E64D2C00656122 /* Extension+UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				1E40296721D05E0300D8A69D /* LocationCell.swift in Sources */,
 				1E40295A21D037AD00D8A69D /* APIManager.swift in Sources */,
 				1E40295F21D04DB800D8A69D /* Extension+UIView.swift in Sources */,
+				1EF427A221E64D2C00656122 /* Extension+UITableView.swift in Sources */,
 				1E40296921D0662500D8A69D /* CustomAnnonationView.swift in Sources */,
 				1E40294A21CEC20100D8A69D /* Location.swift in Sources */,
 				1E40295821D0286C00D8A69D /* CustomCollout.swift in Sources */,
@@ -441,6 +448,7 @@
 				1E40292921CEBC5300D8A69D /* GeoZillaTestAssigment.xcdatamodeld in Sources */,
 				1E40294C21CED67B00D8A69D /* LocationsViewController.swift in Sources */,
 				1E40295C21D0414200D8A69D /* RequestType.swift in Sources */,
+				1EF427A021E640A600656122 /* GeocoderService.swift in Sources */,
 				1E402CC521D2EC6300D8A69D /* CoreDataManager.swift in Sources */,
 				1E40296121D0541A00D8A69D /* CustomAnnotation.swift in Sources */,
 			);
